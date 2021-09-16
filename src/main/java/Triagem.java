@@ -21,7 +21,7 @@ public class Triagem {
             resultado = m.aprovadoEtapa1();
         }else{
 
-            resultado = m.reprovadoEtapa1();
+            resultado = m.reprovado();
 
             if (!idadeNecessaria && !entre61e69) resultado += m.naoPossuiIdadeNecessaria();
 
@@ -31,6 +31,29 @@ public class Triagem {
         }
 
         return resultado;
-
     }
+
+    public String etapa2(Doador doador){
+
+        String resultado = null;
+        Mensagem m = new Mensagem();
+        if (etapa1(doador).equals(m.aprovadoEtapa1())){
+
+            if(!doador.isEstaComFebre() && !doador.isEstaGravida() && !doador.isEstaAmamentando()){
+                resultado = m.aprovadoEtapa2();
+            }
+            else{
+                resultado = m.reprovado();
+
+                if (doador.isEstaComFebre()) resultado += m.doadorEstaComFebre();
+
+                if (doador.isEstaGravida()) resultado += m.doadoraEstaGravida();
+
+                if (doador.isEstaAmamentando()) resultado += m.doadoraEstaAmamentando();
+            }
+        }
+
+        return resultado;
+    }
+
 }

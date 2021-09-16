@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="649e6e08-01cf-48d8-bd18-5016e839fd4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Mensagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mensagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TesteDoador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TesteDoador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Triagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Triagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Mensagem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Mensagem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TesteDoador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TesteDoador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Triagem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Triagem.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +35,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TesteDoador.testarTriagemEtapa2">
     <configuration name="TesteDoador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SistemaDoacaoSangue" />
       <option name="PACKAGE_NAME" value="" />
@@ -39,8 +45,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TesteDoador.testarTriagemEtapa2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SistemaDoacaoSangue" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TesteDoador" />
+      <option name="METHOD_NAME" value="testarTriagemEtapa2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TesteDoador.testarTriagemEtapa2" />
         <item itemvalue="JUnit.TesteDoador" />
       </list>
     </recent_temporary>

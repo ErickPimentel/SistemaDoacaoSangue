@@ -217,17 +217,43 @@ public class TesteDoador {
         //System.out.println(triagem.etapa1(d29));
 
         //Idade (Limite inferior)
-        assertEquals(triagem.etapa1(d09), m.reprovadoEtapa1() + m.naoPossuiIdadeNecessaria());
+        assertEquals(triagem.etapa1(d09), m.reprovado() + m.naoPossuiIdadeNecessaria());
         assertEquals(triagem.etapa1(d10), m.aprovadoEtapa1());
         assertEquals(triagem.etapa1(d11), m.aprovadoEtapa1());
 
         //Idade (Limite Superior)
         assertEquals(triagem.etapa1(d12), m.aprovadoEtapa1());
-        assertEquals(triagem.etapa1(d13), m.reprovadoEtapa1() + m.entre61e69eNuncaDoou());
+        assertEquals(triagem.etapa1(d13), m.reprovado() + m.entre61e69eNuncaDoou());
         assertEquals(triagem.etapa1(d14), m.aprovadoEtapa1());
-        assertEquals(triagem.etapa1(d15), m.reprovadoEtapa1() + m.entre61e69eNuncaDoou());
-        assertEquals(triagem.etapa1(d16), m.reprovadoEtapa1() + m.naoPossuiIdadeNecessaria());
-        assertEquals(triagem.etapa1(d17), m.reprovadoEtapa1() + m.naoPossuiIdadeNecessaria());
+        assertEquals(triagem.etapa1(d15), m.reprovado() + m.entre61e69eNuncaDoou());
+        assertEquals(triagem.etapa1(d16), m.reprovado() + m.naoPossuiIdadeNecessaria());
+        assertEquals(triagem.etapa1(d17), m.reprovado() + m.naoPossuiIdadeNecessaria());
+    }
+
+    @Test
+    public void testarTriagemEtapa2(){
+
+        //com febre e sem febre
+        Doador d30 = new Doador("a", 25, 70, 'M', false, false);
+        Doador d31 = new Doador("a", 25, 70, 'M', true, false);
+
+        //gravida e sem estar gravida
+        Doador d32 = new Doador("a", 25, 70, 'F', false, false,false, false, false);
+        Doador d33 = new Doador("a", 25, 70, 'F', false, false,true, false, false);
+
+        //amamentando e sem amamentar
+        Doador d34 = new Doador("a", 25, 70, 'F', false, false,false, true, false);
+        Doador d35 = new Doador("a", 25, 70, 'F', false, false,false, true, false);
+
+        //com febre, gravida e amamentando
+        Doador d36 = new Doador("a", 25, 70, 'F', true, false,true, true, false);
+
+
+        Triagem triagem = new Triagem();
+        Mensagem m = new Mensagem();
+
+        System.out.println(triagem.etapa2(d36));
+
     }
 
 }

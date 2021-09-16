@@ -4,8 +4,8 @@ public class Mensagem {
         return "Você está apto(a) para a Etapa 2";
     }
 
-    public String reprovadoEtapa1(){
-        return "Não é possível doar sangue \n Motivo(s):\n";
+    public String reprovado(){
+        return "Não é possível doar sangue \nMotivo(s):\n";
     }
 
     public String naoPossuiIdadeNecessaria(){
@@ -18,6 +18,22 @@ public class Mensagem {
 
     public String naoPossuiPesoMinimoNecessario(){
         return "---NAO POSSUI PESO MINIMO NECESSARIO\n";
+    }
+
+    public String aprovadoEtapa2(){
+        return "Por favor, aguarde na fila para doação";
+    }
+
+    public String doadorEstaComFebre(){
+        return "---ESTA COM FEBRE\n";
+    }
+
+    public String doadoraEstaGravida(){
+        return "---ESTA GRAVIDA\n";
+    }
+
+    public String doadoraEstaAmamentando(){
+        return "---ESTA AMAMENTANDO\n";
     }
 
 
