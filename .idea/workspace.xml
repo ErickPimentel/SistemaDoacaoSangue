@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="649e6e08-01cf-48d8-bd18-5016e839fd4a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Mensagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mensagem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Cadastro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TesteDoador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TesteDoador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Triagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Triagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TesteDoador.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TesteDoador.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,12 +39,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TesteDoador.testarTriagemEtapa2">
+  <component name="RunManager" selected="JUnit.TesteDoador">
+    <configuration name="Cadastro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Cadastro" />
+      <module name="SistemaDoacaoSangue" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TesteDoador" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SistemaDoacaoSangue" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TesteDoador" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TesteDoador.testarTriagemEtapa1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SistemaDoacaoSangue" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TesteDoador" />
+      <option name="METHOD_NAME" value="testarTriagemEtapa1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -53,8 +78,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TesteDoador.testarTriagemEtapa2" />
         <item itemvalue="JUnit.TesteDoador" />
+        <item itemvalue="JUnit.TesteDoador.testarTriagemEtapa1" />
+        <item itemvalue="Application.Cadastro" />
+        <item itemvalue="JUnit.TesteDoador.testarTriagemEtapa2" />
       </list>
     </recent_temporary>
   </component>
