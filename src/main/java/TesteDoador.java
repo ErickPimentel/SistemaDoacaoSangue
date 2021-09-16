@@ -242,7 +242,7 @@ public class TesteDoador {
         Doador d33 = new Doador("a", 25, 70, 'F', false, false,true, false, false);
 
         //amamentando e sem amamentar
-        Doador d34 = new Doador("a", 25, 70, 'F', false, false,false, true, false);
+        Doador d34 = new Doador("a", 25, 70, 'F', false, false,false, false, false);
         Doador d35 = new Doador("a", 25, 70, 'F', false, false,false, true, false);
 
         //com febre, gravida e amamentando
@@ -252,7 +252,22 @@ public class TesteDoador {
         Triagem triagem = new Triagem();
         Mensagem m = new Mensagem();
 
-        System.out.println(triagem.etapa2(d36));
+        //com febre e sem febre
+        assertEquals(triagem.etapa2(d30), m.aprovadoEtapa2());
+        assertEquals(triagem.etapa2(d31), m.reprovado() + m.estaComFebre());
+
+        //gravida e sem estar gravida
+        assertEquals(triagem.etapa2(d32), m.aprovadoEtapa2());
+        assertEquals(triagem.etapa2(d33), m.reprovado() + m.estaGravida());
+
+        //amamentando e sem amamentar
+
+        
+        assertEquals(triagem.etapa2(d34), m.aprovadoEtapa2());
+        assertEquals(triagem.etapa2(d35), m.reprovado() + m.estaAmamentando());
+
+        //com febre, gravida e amamentando
+        assertEquals(triagem.etapa2(d36), m.reprovado() + m.estaComFebre() + m.estaGravida() + m.estaAmamentando());
 
     }
 

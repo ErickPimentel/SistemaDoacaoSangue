@@ -24,15 +24,15 @@ public class Mensagem {
         return "Por favor, aguarde na fila para doação";
     }
 
-    public String doadorEstaComFebre(){
+    public String estaComFebre(){
         return "---ESTA COM FEBRE\n";
     }
 
-    public String doadoraEstaGravida(){
+    public String estaGravida(){
         return "---ESTA GRAVIDA\n";
     }
 
-    public String doadoraEstaAmamentando(){
+    public String estaAmamentando(){
         return "---ESTA AMAMENTANDO\n";
     }
 

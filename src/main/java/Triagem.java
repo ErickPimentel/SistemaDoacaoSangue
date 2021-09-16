@@ -45,11 +45,11 @@ public class Triagem {
             else{
                 resultado = m.reprovado();
 
-                if (doador.isEstaComFebre()) resultado += m.doadorEstaComFebre();
+                if (doador.isEstaComFebre()) resultado += m.estaComFebre();
 
-                if (doador.isEstaGravida()) resultado += m.doadoraEstaGravida();
+                if (doador.isEstaGravida()) resultado += m.estaGravida();
 
-                if (doador.isEstaAmamentando()) resultado += m.doadoraEstaAmamentando();
+                if (doador.isEstaAmamentando()) resultado += m.estaAmamentando();
             }
         }
 
