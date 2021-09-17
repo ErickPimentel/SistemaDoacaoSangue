@@ -2,11 +2,11 @@ public class Triagem {
 
     public String etapa1(Doador doador){
 
-        boolean idadeNecessaria = false;
-        boolean entre61e69 = false;
-        boolean pesoMinimo = false;
+        boolean idadeNecessaria;
+        boolean entre61e69;
+        boolean pesoMinimo;
 
-        String resultado = null;
+        String resultado;
 
         //logica
         idadeNecessaria = doador.getIdade() >= 16 && doador.getIdade() <= 60;

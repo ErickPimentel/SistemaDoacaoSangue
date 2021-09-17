@@ -35,6 +35,11 @@ public class Doador {
         this.idade = idade;
         this.peso = peso;
         this.sexo = sexo;
+
+        if (this.sexo == 'M'){
+            throw new RuntimeException("MACHOS NAO DEVEM PREENCHER OS CAMPOS: estaGravida, estaAmamentando, partoMenosDe12Meses");
+        }
+
         this.estaComFebre = estaComFebre;
         this.jaDoouSangue = jaDoouSangue;
         this.estaGravida = estaGravida;
