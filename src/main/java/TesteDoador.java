@@ -22,6 +22,11 @@ public class TesteDoador {
     Triagem triagem = new Triagem();
     Mensagem m = new Mensagem();
 
+    //Idade (Limite Inferior)
+    Doador d37 = new Doador("a", -1, 70, 'M', false, false);
+    Doador d38 = new Doador("a", 0, 70, 'M', false, false);
+    Doador d39 = new Doador("a", 1, 70, 'M', false, false);
+
     //Idade (Limite inferior)
     Doador d09 = new Doador("a", 15, 70, 'M', false, false);
     Doador d10 = new Doador("a", 16, 70, 'M', false, false);
@@ -34,15 +39,24 @@ public class TesteDoador {
     Doador d15 = new Doador("a", 69, 70, 'M', false, false);
     Doador d16 = new Doador("a", 70, 70, 'M', false, false);
     Doador d17 = new Doador("a", 71, 70, 'M', false, false);
+    Doador d40 = new Doador("a", 110, 70, 'M', false, false);
 
 
     //Peso M (Limite Inferior)
+    Doador d44 = new Doador("a", 20, -1, 'M', false, false);
+    Doador d45 = new Doador("a", 20, 0, 'M', false, false);
+    Doador d46 = new Doador("a", 20, 1, 'M', false, false);
+
     Doador d18 = new Doador("a", 20, 58, 'M', false, false);
     Doador d19 = new Doador("a", 20, 59, 'M', false, false);
     Doador d20 = new Doador("a", 20, 60, 'M', false, false);
     Doador d21 = new Doador("a", 20, 61, 'M', false, false);
 
     //Peso F (Limite Inferior)
+    Doador d47 = new Doador("a", 20, -1, 'M', false, false);
+    Doador d48 = new Doador("a", 20, 0, 'M', false, false);
+    Doador d49 = new Doador("a", 20, 1, 'M', false, false);
+
     Doador d22 = new Doador("a", 20, 48, 'F', false, false,false, false, false);
     Doador d23 = new Doador("a", 20, 49, 'F', false, false,false, false, false);
     Doador d24 = new Doador("a", 20, 50, 'F', false, false,false, false, false);
@@ -67,6 +81,16 @@ public class TesteDoador {
     //amamentando e sem amamentar
     Doador d34 = new Doador("a", 25, 70, 'F', false, false,false, false, false);
     Doador d35 = new Doador("a", 25, 70, 'F', false, false,false, true, false);
+
+    //com febre e gravida
+    Doador d41 = new Doador("a", 25, 70, 'F', true, false,true, false, false);
+
+    //com febre e amamentando
+    Doador d42 = new Doador("a", 25, 70, 'F', true, false,false, true, false);
+
+    //gravida e amamentando
+    Doador d43 = new Doador("a", 25, 70, 'F', false, false,true, true, false);
+
 
     //com febre, gravida e amamentando
     Doador d36 = new Doador("a", 25, 70, 'F', true, false,true, true, false);
@@ -229,6 +253,11 @@ public class TesteDoador {
     @Test
     public void testarTriagemEtapa1(){
 
+        //Idade (Limite inferior
+        assertEquals(triagem.etapa1(d37), m.reprovado() + m.naoPossuiIdadeNecessaria());
+        assertEquals(triagem.etapa1(d38), m.reprovado() + m.naoPossuiIdadeNecessaria());
+        assertEquals(triagem.etapa1(d39), m.reprovado() + m.naoPossuiIdadeNecessaria());
+
         //Idade (Limite inferior)
         assertEquals(triagem.etapa1(d09), m.reprovado() + m.naoPossuiIdadeNecessaria());
         assertEquals(triagem.etapa1(d10), m.aprovadoEtapa1());
@@ -241,14 +270,23 @@ public class TesteDoador {
         assertEquals(triagem.etapa1(d15), m.reprovado() + m.entre61e69eNuncaDoou());
         assertEquals(triagem.etapa1(d16), m.reprovado() + m.naoPossuiIdadeNecessaria());
         assertEquals(triagem.etapa1(d17), m.reprovado() + m.naoPossuiIdadeNecessaria());
+        assertEquals(triagem.etapa1(d40), m.reprovado() + m.naoPossuiIdadeNecessaria());
 
         //Peso M (Limite Inferior)
+        assertEquals(triagem.etapa1(d44), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
+        assertEquals(triagem.etapa1(d45), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
+        assertEquals(triagem.etapa1(d46), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
+
         assertEquals(triagem.etapa1(d18), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
         assertEquals(triagem.etapa1(d19), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
         assertEquals(triagem.etapa1(d20), m.aprovadoEtapa1());
         assertEquals(triagem.etapa1(d21), m.aprovadoEtapa1());
 
         //Peso F (Limite Inferior)
+        assertEquals(triagem.etapa1(d47), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
+        assertEquals(triagem.etapa1(d48), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
+        assertEquals(triagem.etapa1(d49), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
+
         assertEquals(triagem.etapa1(d22), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
         assertEquals(triagem.etapa1(d23), m.reprovado() + m.naoPossuiPesoMinimoNecessario());
         assertEquals(triagem.etapa1(d24), m.aprovadoEtapa1());
@@ -277,6 +315,15 @@ public class TesteDoador {
         //amamentando e sem amamentar
         assertEquals(triagem.etapa2(d34), m.aprovadoEtapa2());
         assertEquals(triagem.etapa2(d35), m.reprovado() + m.estaAmamentando());
+
+        //com febre e gravida
+        assertEquals(triagem.etapa2(d41), m.reprovado() + m.estaComFebre() + m.estaGravida());
+
+        //com febre e amamentando
+        assertEquals(triagem.etapa2(d42), m.reprovado() + m.estaComFebre() + m.estaAmamentando());
+
+        //gravida e amamentando
+        assertEquals(triagem.etapa2(d43), m.reprovado() + m.estaGravida() + m.estaAmamentando());
 
         //com febre, gravida e amamentando
         assertEquals(triagem.etapa2(d36), m.reprovado() + m.estaComFebre() + m.estaGravida() + m.estaAmamentando());

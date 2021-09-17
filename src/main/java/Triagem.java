@@ -1,4 +1,29 @@
 public class Triagem {
+/*
+    public boolean estadoEtapa1(Doador doador){
+
+        boolean idadeNecessaria;
+        boolean entre61e69;
+        boolean pesoMinimo;
+
+        boolean resultado;
+
+        //logica
+        idadeNecessaria = doador.getIdade() >= 16 && doador.getIdade() <= 60;
+
+        entre61e69 = doador.getIdade() > 60 && doador.getIdade() <= 69;
+
+        pesoMinimo = (doador.getPeso() >= 60) & (doador.getSexo() == 'M') || (doador.getPeso() >= 50 && doador.getSexo() == 'F');
+
+        if ((idadeNecessaria || (entre61e69 && doador.isJaDoouSangue())) && pesoMinimo){
+            resultado = true;
+        }
+        else {
+            resultado = false;
+        }
+
+        return resultado;
+    }*/
 
     public String etapa1(Doador doador){
 
